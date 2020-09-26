@@ -1,0 +1,32 @@
+# Understanding Clustering through a dataset called "World Happiness Report".
+World Happiness Report
+The dataset which we have choosen is the 2017 Happiness dataset. This dataset gives the happiness rank and happiness score of 155 countries around the world based on several factors including family, life expectancy, economy, generosity, trust in government, freedom and dystopia residual. Sum of the value of these seven factors gives us the happiness score and the higher the happiness score, the lower the happiness rank. So, it is evident that the higher value of each of these seven factors means the level of happiness is higher. We can define the meaning of these factors as the extent to which these factors lead to happiness.
+Dystopia is the opposite of utopia and has the lowest happiness level. Dystopia will be considered as a reference for other countries to show how far they are from being the poorest country regarding happiness level.
+
+The dataset can be downloaded from :- https://www.kaggle.com/unsdsn/world-happiness
+
+# Importing Libraries
+# Linear Algebra
+import numpy as np
+
+# Data Processing
+import pandas as pd
+
+# Data Visualization
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+import warnings
+warnings.filterwarnings('ignore')
+import chart_studio.plotly as py # For World map
+import plotly.graph_objects as go
+import plotly.express as px
+from plotly.offline import init_notebook_mode
+import plotly.offline as py
+init_notebook_mode(connected=True)
+
+
+# Algorithm
+from scipy import cluster as svc
+# Collecting data
+happiness_data = pd.read_csv(r'C:\Users\Dad\Desktop\course\course\data\2017.csv')
